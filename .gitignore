@@ -1,0 +1,17 @@
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+main-1.pdf
+*.toc
+*.synctex.gz
+*backup
+.*swp
+*.lock
+*sage-chat
+*sage-git
+
+fig/*-eps-converted-to.pdf
