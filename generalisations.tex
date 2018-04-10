@@ -1,0 +1,71 @@
+\section{Generalisations \& Consequences}
+At this point we have established the following results.
+\begin{enumerate}
+\item Even dimensional spheres do not admit a smooth non-vanishing vector field, let alone enough to form a basis for the tangent bundle.
+\item Odd dimensional spheres are guaranteed to admit at least one such field.
+\item $n$-spheres for $n=1,3,7$ admit 1, 3 and 7 linearly independent, non-vanishing smooth vector fields and hence are parallelisable.
+\end{enumerate}
+As stated in the historical overview, the now well established, claim is that these are indeed the only parallelisable spheres. It is however, beyond the scope of this project to prove this claim. A summary of the four key works on this particular topic are described chronologically as follows (among the other papers mentioned in the historical overview).
+\begin{enumerate}
+%\item 1898: Hurwitz's theorem for formulae of sums - \cite{Hurwitz1898}
+%\item 1940/1941: Hopf - Dimension of a division algebra is a power of 2 - \cite{MR0004785}
+\item January 1958: \cite{MR3075371} - Kervaire uses a theorem due to Bott in order to show that for $s\geq 3$, $\mathbb{S}^{4s-1}$ is not parallelisable. 
+\item Februrary 1958: \cite{MR0102805} - Milnor uses the same theorem of Bott's to show that the only division algebras over the reals of dimension $n$ occur only for $n=1,2,4,8$ and that these are the only $n$ for which $\mathbb{S}^{n-1}$ is parallelisable. 
+%\item 1958: Bott \& Milnor - Sphere parallelisability - \cite{MR0102804}
+\item January 1960: \cite{MR0141119} - Adams uses $K$-theory to establish the equivalence between sphere parallelisability and division algebra existence among two other equivalent concepts. A key point to note is that Adams' work gives insight into parallelisability of $\mathbb{S}^{n-1}$ with differentiable structures other than the standard one.
+\item April 1960: \cite{atiyah1961bott} - Atiyah \& Hirzebruch give a refined version of Bott's results to prove that $\mathbb{S}^n$ is not parallelisable for $n\neq 1,3,7$ with the standard differentiable structure. 
+\end{enumerate}
+The work of Milnor, Kervaire, Atiyah, Hirzebruch and Adams all rely on $K$-theory and in particular, so called Bott Periodicity.
+%In order to show rigorously that $n=1,2,4,8$ are indeed the only dimensions in which a division algebra exists or in which $\mathbb{S}^{n-1}$ is parallelisable, we require:\\
+%
+%In the 19th century, Frobenius and Hurwitz were able to prove that there are only four normed division algebras ($\mathbb{R},\mathbb{C},\mathbb{H},\mathbb{O}$).
+
+%\textit{Rough Timeline of Events:}
+%\begin{enumerate}
+%\item 1898: Hurwitz's theorem - \cite{Hurwitz1898}
+%\item 1940/1941: Hopf - Dimension of a division algebra is a power of 2 - \cite{MR0004785}
+%\item 1958: Milnor - Dim is 1, 2, 4 or 8 - \cite{MR0102805}
+%\item 1958: Bott \& Milnor - Sphere parallelisability - \cite{MR0102804}
+%\item 1958: Kervaire - Nonparallelisability of the sphere $\mathbb{S}^{n-1}$ for $n>8$ - \cite{MR3075371}
+%\item 1960: Atiyah \& Hirzebruch - Parallelisability of spheres - \cite{atiyah1961bott}
+%\item 1960: Adams - Equivalent conditions - \cite{MR0141119}
+%\item 1962: Adams - Vector fields on spheres paper - \cite{MR0139178}
+%\end{enumerate}
+
+%\textbf{\textcolor{red}{Probably need to rejig the history section to ensure consistency...}}\\
+Topological $K$-Theory is a branch topology that relies primarily on algebaric tools such homology and cohomology in the solution of problems. In particular, it is a form of generalised cohomology theory (a tool which we have not discussed in this report) and is used to study vector bundles on topological spaces. Early work in the field of topological $K$-theory was due to Atiyah and Hirzebruch. 
+%In their paper \cite{atiyah1961bott}, Atiyah and Hirzebruch use theorems due to Bott to prove that $\mathbb{S}^n$ is not parallelisable for $n\neq  1,3,7$ with the usual differentiable structures on the sphere.
+
+In \cite{MR0141119}, Adams famously applied topological $K$-theory in order to solve the ``Hopf invariant one problem''. The Hopf invariant is a type of homotopy invariant between spheres. As mentioned in the historical overview, in \cite{MR1512691}, Hopf established a map $\eta:\mathbb{S}^3\to\mathbb{S}^2$ where for any point $x\in\mathbb{S}^2$, the pre-image under $\eta$ is a circle in $\mathbb{S}^3$. Hopf was able to use the linking number (a numerical invariant describing the number of times a curve in space winds around another) of two such circles to prove that $\eta$ is not homotopic to the constant map. From here, the map was generalised to the form $\phi:\mathbb{S}^{2n-1}\to\mathbb{S}^n$, $n>1$. Through the use of (co)homology theory, an integer-valued invariant $h(\phi)$ was developed and a natural question to then pose was ``for which values of $n$ is $h(\phi)=1$?''. It was then in \cite{MR0141119} where Adams was able to answer this question and show that $n=1,2,4,8$ are the only such possible values.
+
+As a result of this, he managed to established strong conditions on, among other things, the existence of division algebras as well as establishing that $S^{n-1}$ with is parallelisable only for $n=2,4,8$.\\
+%\subsection{$K$-Theory}
+
+As a final remark, we have the following results closely related to the results discussed in this report.
+\begin{itemize}
+\item The only fibre bundles in which the total, base and fibre spaces are all spheres are precisely those whose fibre spaces are the parallelisable spheres, i.e.
+\begin{itemize}
+\item $\mathbb{S}^1\to\mathbb{S}^1$ with fibre $\mathbb{S}^0$,
+\item $\mathbb{S}^3\to\mathbb{S}^2$ with fibre $\mathbb{S}^1$,
+\item $\mathbb{S}^7\to\mathbb{S}^4$ with fibre $\mathbb{S}^3$,
+\item $\mathbb{S}^{15}\to\mathbb{S}^8$ with fibre $\mathbb{S}^7$,
+\end{itemize} 
+are the only such types of fibre bundles. This is a consequence of Adams.
+\item All Lie groups (i.e. smooth manifolds also endowed with a group structure) are parallelisable, \cite{MR2954043}. It is interesting to note that while $\mathbb{S}^1$ and $\mathbb{S}^3$ have Lie group structures, $\mathbb{S}^7$ does not.
+\item All parallelisable manifolds are orientable. A proof of this can be found in \cite{MR2954043}.
+\end{itemize} 
+
+%\textcolor{red}{Hopf maps, hopf invariant, Adams...}
+%
+%If one is familiar with the concept of a \textit{Lie group} (i.e. a manifold also endowed with a group structure), \textcolor{red}{something something something all Lie groups are parallelisable...} $\mathbb{S}^3$ has a Lie group structure but $\mathbb{S}^7$ does not.
+%
+%Furthermore, it can be shown that all parallelisable manifolds are orientable. For a proof of this, refer to \cite{MR2954043}.
+%\subsection{Consequences}
+%%\textcolor{red}{Existence of parallel transport on manifolds due to parallelisability?}\\
+%
+%\textcolor{red}{All parallelisable manifolds are orientable.}\\
+%
+%\textcolor{red}{Every Lie Group is parallelisable.}\\
+%
+%\textcolor{red}{Hopf maps?}
+\pagebreak
