@@ -1,111 +1,14 @@
 \documentclass[12pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{enumerate}
-\usepackage{amsthm}
-\usepackage[a4paper, total={6in, 8in}]{geometry}
-\usepackage{listings}
-\usepackage{tikz}
-\usepackage{tikz-cd}
-\usepackage{epstopdf}
-\usepackage{hyperref}
-\usepackage{subcaption}
-\usepackage{color}
-\usepackage[bottom, hang]{footmisc}
 
-\numberwithin{equation}{section}
+\input{settings}
 
-\newtheorem{lemma}{Lemma}[section]
-
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{corollary}{Corollary}[section]
-
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
-
-\newtheorem{proposition}{Proposition}[section]
-
-\newtheorem{example}{Example}[section]
-
-\theoremstyle{remark}
-\newtheorem{remark}{Remark}
-
-\lstset{basicstyle=\ttfamily,
-language=Matlab,showspaces=false,frame=single,breaklines=true,showstringspaces=false,
-numbers=left,numberstyle={\tiny \color{black}},numbersep=9pt}
-
-\setcounter{secnumdepth}{5}
-
-\usepackage[numbib,nottoc]{tocbibind}
+\title{A case study in differential topology: Parralisability of spheres}
+\author{Paul Bryan and Rhuaidi Burke}
 
 \begin{document}
-%\textbf{\textcolor{red}{TODO:}}
-%\begin{itemize}
-%\item 23:00 - Generalisations
-%\item Wed Night - Hopf maps?
-%\end{itemize}
-%\pagebreak
 
-\vspace{1cm}
-\title{    
-    \textsc{Results on the \\Parallelisability of Spheres}
-    }
-    
-    \vspace{1cm}
-    
-    % if you are the only author, you might use the following
-    \author{Rhuaidi Antonio Burke}  
-    
-    % Insert here your name and correct mail address
-    %\author{\Large \href{mailto:first.student@smail.fh-koeln.de}{First Student} \and \Large \href{mailto:second.student@smail.fh-koeln.de}{Second Student}
-    \vspace{1cm}
-    
-    % name of the course and module
-    \date{
-    \large SCIE3250 \\ Final Report \\ 
-    \vspace{1cm}
-    \large Supervisor: Dr. Paul Bryan \\
-    \vspace{1cm}
-    \today
-    }
+\maketitle
 
-    \maketitle
-    \setlength{\parindent}{0pt}
-
-\vspace{2cm}
-\begin{abstract}
-\noindent This report discusses parallelisability of spheres. The first section gives a review of some of the concepts from differential geometry used. Using techniques from analysis due to Milnor, we then present a proof that $\mathbb{S}^n$ admits no non-vanishing vector field for even $n$. This result is then used to prove the ``Hairy Ball Theorem''. The Poincar\`{e}-Hopf theorem is also proven for general manifolds. From this, we then present a different proof regarding the existence of the aforementioned vector fields.
-We then show that $\mathbb{S}^1$, $\mathbb{S}^3$ and $\mathbb{S}^7$ are parallelisable by directly constructing 1, 3 and 7 smooth linearly independent, nowhere vanishing vector fields on each of these spheres respectively. The connection of this result to the existence of normed division algebras is then considered. Consequences and generalisations of these results are also briefly discussed, in particular the existence of Hopf maps and the work of Adams.\\
-\begin{center}
-\noindent All graphics were made in either Adobe Illustrator or Mathematica unless otherwise stated.
-\end{center}
-\end{abstract}
-
-
-%\title{Results on the Parallelisability of Spheres}
-%\author{Rhuaidi Burke,\\Under the supervision of Dr. Paul Bryan.}
-%\maketitle
-%\begin{abstract}
-%%An interesting question to ask when working with smooth manifolds is how many smooth pointwise linearly independent vector fields can place on the manifold. If the number of vector fields is equal to the dimension of the manifold, we say the manifold is parallelisable. 
-%This report discusses parallelisability of spheres. The first section gives a review of some of the concepts from differential geometry used. Using techniques from analysis due to Milnor, we then prove that $\mathbb{S}^n$ admits no non-vanishing vector field for $n$ even and as a result, prove the well-known ``Hairy Ball Theorem''. We also prove the Poincar\`{e}-Hopf theorem for both regular surfaces and general manifolds. From this, we then present a different proof regarding the existence of the aforementioned vector fields.
-%We then show that $\mathbb{S}^1$, $\mathbb{S}^3$ and $\mathbb{S}^7$ are parallelisable by directly constructing 1, 3 and 7 smooth linearly independent vector fields on each of these spheres respectively. The connection of this result to the existence of the Hopf maps and division algebras are then considered. Consequences and generalisations of these results are also discussed.\\
-%
-%\begin{flushleft}
-%All graphics original and painstakingly made in Adobe Illustrator or Mathematica unless otherwise stated.
-%\end{flushleft}
-%\end{abstract}
-\thispagestyle{empty}
-\nocite{*}
-\pagebreak
-\tableofcontents
-\pagebreak
-%\listoffigures
-
-%\listoftables
-%\pagebreak
 \section{Introduction}
 The primary area of study that this research project takes place in is differential geometry and topology. One of the most important concepts, not just in differential geometry and topology, but in almost all areas of mathematics, is that of a \textit{manifold}. At this point, it will suffice if the reader considers the surface of a sphere or torus.\\
 
@@ -876,7 +779,7 @@ Now suppose that there are $n$ independent vector fields $\{v_1,\ldots,v_n\}$ on
 %\hfill\\
 %asdf
 \pagebreak
- \section{Constructing Parallelisations}
+\section{Constructing Parallelisations}
 In order to first motivate some of the results in this section, we will prove the famous Hairy Ball Theorem\footnote{Depending on the referece, this theorem may either refer to the case of all even dimensional spheres or simply the case for $\mathbb{S}^2$ - in this case we will opt for the latter characterisation.}. We will see that this is in fact a special case of a more general theorem which we will also prove. Two proofs are given, one of an analytic nature due to Milnor \cite{MR505523} and the other using the Poincar\`{e}-Hopf theorem which we prove.
 We shall then construct explicit parallelisations for $\mathbb{S}^n$, $n=1,3,7$. Finally we discuss results related to the existence of division algebras.
  
