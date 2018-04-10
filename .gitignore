@@ -13,5 +13,6 @@ main-1.pdf
 *.lock
 *sage-chat
 *sage-git
+auto/
 
 fig/*-eps-converted-to.pdf
