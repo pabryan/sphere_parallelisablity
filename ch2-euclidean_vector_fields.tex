@@ -1,4 +1,4 @@
-TODO:
+\ntd{TODO:}
 \begin{itemize}
 %\item Either reword Proposition 2.1 so as not to be reliant on manifolds or move to later section.
 \item Fix image scalings.
@@ -9,14 +9,14 @@ TODO:
 \begin{center}
 \small
 \justify
-\texttt{Use chapterprecishere after eventual change to memoir/book doc class.}\\
+\ntd{Use chapterprecishere after eventual change to memoir/book doc class.}\\
 \textit{In this chapter we discuss the concept of vector fields, first in the setting of familiar Euclidean space and then specifically vector fields on spheres. We then give an explicit construction of a non-vanishing vector field on spheres of odd dimension. Finally, we give a proof due to Milnor that shows that we cannot construct such non-vanishing vector fields on spheres of an even dimension.}
 \normalsize
 \end{center}
 \hfill\\
-\texttt{Motivation/intro/note to myself:}
+\ntd{Motivation/intro/note to myself:}
 
-We will first introduce the notion of vector fields in the familiar setting of Euclidean space without venturing into the world of manifolds or vector bundles. As we shall see through the course of this chapter, a number of the important results \texttt{*key*(?)} to this \texttt{*book*(?)} can be established without the use of such machinery. In this way, we may later naturally expand and develop upon the elementary concepts and techniques first introduced in this chapter. In the second half of the chapter, we focus on the task of constructing non-vanishing vector fields on spheres.
+We will first introduce the notion of vector fields in the familiar setting of Euclidean space without venturing into the world of manifolds or vector bundles. As we shall see through the course of this chapter, a number of the important results \ntd{*key*(?)} to this \ntd{*book*(?)} can be established without the use of such machinery. In this way, we may later naturally expand and develop upon the elementary concepts and techniques first introduced in this chapter. In the second half of the chapter, we focus on the task of constructing non-vanishing vector fields on spheres.
 %
 %\begin{itemize}
 %\item definitions
@@ -26,7 +26,7 @@ We will first introduce the notion of vector fields in the familiar setting of E
 %\item Milnor proof for even
 %\end{itemize}
 \subsection{Vector Fields in Euclidean Space}
-\texttt{Adapted from other docs:}
+\ntd{Adapted from other docs:}
 
 \noindent Vectors in Euclidean space $\mathbb{R}^n$ can be understood as either so-called ``free vectors'' in which we simply think of $\mathbb{R}^n$ as a Euclidean vector space. Alternatively, we can think of ``place-bound vectors'' at a point in $\mathbb{R}^n$, in which we consider $\mathbb{R}^n$ as a metric space, the vectors in which form the points of the space. These ``place-bound vectors'' then form vector spaces in their own right, each one consisting of all possible vectors attached to a particular point. An example of a consequence following from this train of thought is that vectors at different points cannot be added/subtracted (this is a crucial idea that will become important later when we wish to differentiate vector fields in more general spaces!).
 
@@ -68,7 +68,7 @@ T_x\mathbb{R}^n=\{v_x:v\in\mathbb{R}^n\}.
 
 There is then also a canonical isomorphism between $T_x\mathbb{R}^n$ and $\mathbb{R}^n$ given by $v_x\mapsto v$.
 
-Consequently, the differential of a smooth map $f$ from $\mathbb{R}^n$ to $\mathbb{R}^m$ at the point $x$, denoted by $Df_x$ can now be interpreted as a linear map $f_{*,x}$ \texttt{maybe change/check that notation...} between the corresponding tangent spaces.
+Consequently, the differential of a smooth map $f$ from $\mathbb{R}^n$ to $\mathbb{R}^m$ at the point $x$, denoted by $Df_x$ can now be interpreted as a linear map $f_{*,x}$ \ntd{maybe change/check that notation...} between the corresponding tangent spaces.
 
 \begin{definition}
 A \textit{vector field} $X$, defined on an open subset $U$ of $\mathbb{R}^n$ is a vector-valued function
@@ -77,7 +77,7 @@ X:U\subset\mathbb{R}^n\to\mathbb{R}^n\times\mathbb{R}^n,
 \]
 of the form $x\mapsto (x,X(x))$, that assigns to each point $x\in U$, a tangent vector $X(x)\in\mathbb{R}^n_x$.
 \end{definition}
-\noindent \texttt{Maybe tie this definition into what was said about the differential of a map before, like in Agricola \& Friedrich...?}
+\noindent \ntd{Maybe tie this definition into what was said about the differential of a map before, like in Agricola \& Friedrich...?}
 \noindent As with tangent vectors, we will often identify the pair $(x,X(x))$ simply with $X$ itself.
 If each component of $X$ is $C^k$ continuously differentiable then we say $V$ is a $C^k$ vector field. 
 
@@ -129,7 +129,7 @@ X_x=\sum_iX^i(x)\left(\frac{\partial}{\partial x^i}\right)_x,
 \]
 which is a smoothly varying field of tangent vectors.
 
-\noindent\texttt{From original report:}
+\noindent\ntd{From original report:}
 %\begin{definition}
 %If $M$ is a smooth manifold, a \textit{vector field on $M$} is a section of the tangent bundle, $X:M\to TM$. By definition of a section, if $\pi:TM\to M$ is the natural projection map of the tangent bundle, then
 %\[
@@ -155,7 +155,7 @@ X(fg)=f(Xg)+g(Xf).
 \]
 Then $X$ is a vector field.
 \end{proposition}
-\texttt{I just realised as I was re-wording this section that perhaps we should move/postpone this proposition until bundles have been established, since the proof mentions the tangent bundle and as it stands I've just gone through and replaced all instances of $M$ with $\mathbb{R}^n$ - maybe a little ``unmotivated'' or irrelevant at this point...}
+\ntd{I just realised as I was re-wording this section that perhaps we should move/postpone this proposition until bundles have been established, since the proof mentions the tangent bundle and as it stands I've just gone through and replaced all instances of $M$ with $\mathbb{R}^n$ - maybe a little ``unmotivated'' or irrelevant at this point...}
 \begin{proof}
 Given such a derivation $X$ and $x\in M$, the map $X_x:C^{\infty}(\mathbb{R}^n)\to\mathbb{R}$ given by $X_x(f)=(X(f))(x)$ is a derivation at $x$ and so defines an element of $T_x\mathbb{R}^n$. The map $x\mapsto X_x$ from $\mathbb{R}^n$ to $T\mathbb{R}^n$ is hence a vector field and it remains to check smoothness. The components of $X_x$ with respect to the coordinate tangent basis $\partial_1,\ldots,\partial_n$ for a chart $\varphi:U\to V$ is given by,
 \[

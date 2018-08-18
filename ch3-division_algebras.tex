@@ -1,0 +1,110 @@
+\section{Division Algebras}
+In this section, we present some results that closely relate the existence of division algebras with the previously discussed results for sphere parallelisability.
+\begin{definition}
+A \textit{division algebra} is a ring in which every non-zero element has a multiplicative inverse, but in which multiplication is not necessarily commutative. For more details, see \cite{MR1415833}.
+\end{definition}
+\begin{theorem}
+Suppose $\mathbb{R}^n$ has a division algebra structure, $m:\mathbb{R}^n\times\mathbb{R}^n\to\mathbb{R}^n$. Then $T\mathbb{S}^{n-1}$ is diffeomorphic to $\mathbb{S}^{n-1}\times\mathbb{R}^{n-1}$.
+\end{theorem}
+\begin{proof}
+Suppose $\mathbb{R}^n$ is a division algebra. By definition of a division algebra, we have that there exists an identity element $e\in\mathbb{S}^{n-1}$ such that
+\[
+m(e,x)=m(x,e)=x,\,\forall x\in\mathbb{R}^n.
+\]
+For each point $x\in\mathbb{S}^{n-1}$, let us define the map $L_x:\mathbb{S}^{n-1}\to\mathbb{S}^{n-1}$ by,
+\[
+L_x(y)=\frac{m(x,y)}{\|m(x,y)\|},
+\]
+given some other point $y\in\mathbb{S}^{n-1}$. Since $\mathbb{R}^{n}$ is a division algebra, for each element $z\in\mathbb{S}^{n-1}$, there exists precisely one other element $y\in\mathbb{S}^{n-1}$ such that $L_x(y)=z$. Hence $L_x$ is a diffeomorphism 
+%(\texttt{Is what we have thus far sufficient to conclude this I wonder?}). 
+Furthermore, note that $L_x(e)=x$. Hence, we have $d(L_x)_e:T\mathbb{S}^{n-1}_e\to T\mathbb{S}^{n-1}_x$ is a linear isomorphism. Now define the diffeomorphism $f:\mathbb{S}^{n-1}\times T\mathbb{S}^{n-1}_e\to T\mathbb{S}^{n-1}$ by,
+\[
+f(x,v)=\left(x,d(L_x)_e(v) \right).
+\]
+We may now conclude that $\mathbb{S}^{n-1}\times T\mathbb{S}^{n-1}_e\cong \mathbb{S}^{n-1}\times\mathbb{R}^{n-1}$ is diffeomorphic to $T\mathbb{S}^{n-1}$.\\
+%(\texttt{More detail required?}).
+
+%\texttt{Don't quite buy/need to show}: $\mathbb{S}^{n-1}\times T\mathbb{S}^{n-1}_e\cong\mathbb{S}^{n-1}\times\mathbb{R}^{n-1}$...\\
+
+%In addition, we note that we can always modify the multiplication map $m$ to produce an identity that fits our requirements. Specifically, choose a vector $e\in\mathbb{S}^{n-1}$. After composing the multiplication with an invertible linear map from $\mathbb{R}^n\to\mathbb{R}^n$, taking $m(e,e)$ to $e$, we may assume that $m(e,e)=e$. Let $\alpha$ be the map such that $x\mapsto m(x,e)$ and let $\beta$ be the map such that $x\mapsto m(e,x)$. Now define the new multiplication map $m'$ to be
+%\[
+%m'(x,y)=m\left(\alpha^{-1}(x),\beta^{-1}(x)\right).
+%\]
+%Observe that
+%\[
+%m'(x,e)=m\left(\alpha^{-1}(x),\beta^{-1}(e) \right)=m(\alpha^{-1}(x),e)=x,
+%\]
+%and
+%\[
+%m'(e,x)=x.
+%\]
+%Thus, we have produced a new multiplication map $m':\mathbb{R}^n\to\mathbb{R}^n$ with an identity element $e\in\mathbb{S}^{n-1}$.\\
+
+For each point $x\in\mathbb{S}^{n-1}$, our map $L_x$ gives a linear isomorphism from $\mathbb{R}^n$ to itself. By scaling the output to have length 1, left multiplication by $x$ gives a diffeomorphism from $\mathbb{S}^{n-1}$ to itself which maps the point 1 to $x$. Taking the derivative of this diffeormorphism at the point $1$ gives a linear isomorphism from the tangent space of the sphere at the point $1$ to the tangent space at $x$. Since the point $x$ on the sphere is arbitrary, a choice of basis for the tangent space of the sphere at the point $1$ determines a trivialisation of the whole bundle of the $(n-1)$-sphere. 
+\end{proof}
+We also have the following alternative characterisation of the same proof which we present here for the sake of contrast.
+\begin{theorem}
+If $\mathbb{R}^n$ has the structure of a division algebra, then $S^{n-1}$ is parallelisable.
+\end{theorem}
+\begin{proof}
+Choose a basis $\{e_1,\ldots,e_n\}$ of $\mathbb{R}^n$ such that $e_1=1$. Take $x\in\mathbb{S}^{n-1}$ and define
+\begin{equation}
+v_i(x)=xe_i-\langle x,xe_i\rangle x,\,i\geq 2.
+\label{eq:vi-orig}
+\end{equation}
+Then we have $\langle x,v_i(x)\rangle =0$ and so $(x,v_i(x))\in T\mathbb{S}^{n-1}$, i.e. $v_i$ is a tangent vector field on $\mathbb{S}^{n-1}$. Since,
+\[
+\{1,e_2,\ldots,e_n\},
+\]
+is a linearly independent set, so is the set
+\[
+\{x,xe_2,\ldots,xe_n\},
+\]
+since we have the structure of a division algebra, meaning that $L_x$ is a linear isomorphism.
+
+%Note that if we consider the $v_i$ as being written in the form $v_{i+1}=c_{i+1}e_i+f_{i+1}$, $v_{i+2}=c_{i+2}e_i+f_{i+2}$ for $i\geq 2$, then if $f_3=\lambda f_2$, for some scalar $\lambda$, then $e_i,e_{i+1}\in\mathrm{span}\{e_i,f_2\}$ and so on. However, since we know that the $e_i$ are linearly independent and by the above, we know that this is not the case. \texttt{TO BE FIXED LATER...}
+\begin{proposition}
+The vectors $v_i(x)$ form a basis for $T_x\mathbb{S}^{n-1}$.
+\end{proposition}
+\begin{proof}
+Given a point $x\in\mathbb{S}^{n-1}$, it follows that $\{x\}^\bot=T_x\mathbb{S}^{n-1}$, i.e. the set of vectors orthogonal to $x$ on the sphere are precisely those in the tangent space at $x$.
+Hence, we have the following characterisation of the vectors $v_i(x)$ in terms of a projection $\pi$ onto the orthogonal complement of $x$.
+\[
+v_i(x)=\pi_{\{x\}^\bot}(e_i\cdot x)=\pi_{T_x\mathbb{S}^{n-1}}(e_i\cdot x).
+\]
+First, note that 
+\[
+\dim\left(\mathrm{span}\{v_i\}_{i=2}^n\right)=n-1=\dim\left(T_x\mathbb{S}^{n-1}\right).
+\]
+Since the spaces under consideration are finite dimensional, it suffices to show that $\dim \pi(\mathrm{span}\{v_i\}) =n-1$.\\
+
+Let $\{w_j\}_{j=1}^k$ with $k\leq n-1$ be a basis for $\pi(\mathrm{span}\{v_i\})$. Then $v_i=c^j_iw_j$ (where the Einstein summation convention is being used). Rearranging \eqref{eq:vi-orig} for $xe_i$, we hence have,
+\begin{align*}
+xe_i&=v_i+\langle x,xe_i\rangle x\\
+&=c^j_iw_j+\langle x,xe_i\rangle x.
+\end{align*}
+Note that
+\[
+c^j_iw_j+\langle x,xe_i\rangle x\in\mathrm{span}\{x,w_j\},
+\]
+We hence have that
+\begin{align*}
+\mathrm{span}\{xe_i\}&\subseteq\mathrm{span}\{x,w_j\}\\
+\Rightarrow n&=k+1\\
+\Rightarrow k&=n-1,
+\end{align*}
+as was required.
+\end{proof}
+%We claim that it follows that the vectors $v_2(x),\ldots,v_n(x)$ are linearly independent. To see this, consider the following. Assume for a contradiction that their projections are linearly dependent. Then given $e_1,\ldots,e_{n+1}$, we can write $v_2,\ldots,v_{n+1}$ in the form
+%\begin{align*}
+%v_2&=c_2e_1+f_2\\
+%&\,\,\,\vdots\\
+%v_{n+1}&=c_{n+1}e_1+f_{n+1},
+%\end{align*}
+%where the $c_i$ are constants and the $f_i\in e_1^{\bot}$. Let $V=\mathrm{span}f_i$. Then $e_1,e_2,\ldots,e_{n+1}\in V\bigoplus e_1$. This would imply that the basis vectors $e_i$ are linearly dependent, a contradiction.
+Hence, the vectors $v_2(x),\ldots,v_n(x)$ are linearly independent. Consequently, the map $\varphi:\mathbb{S}^{n-1}\times \mathbb{R}^{n-1}\to T\mathbb{S}^{n-1}$ defined by,
+\[
+\varphi(x,(t_2,\ldots,t_n))=(x,t_2v_2(x)+\cdots+t_nv_n(x)),
+\]
+is the isomorphism between $T\mathbb{S}^{n-1}$ and $\mathbb{S}^{n-1}\times\mathbb{R}^{n-1}$ that we seek.
+\end{proof}
